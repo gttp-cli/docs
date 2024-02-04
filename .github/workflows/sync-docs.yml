@@ -8,22 +8,23 @@ on:
 jobs:
   sync-docs:
     runs-on: ubuntu-latest
+    if: "${{ github.event.head_commit.message != 'docs: sync docs' }}"
     steps:
-      - name: Checkout gttp repo
+      - name: Checkout repo
         uses: actions/checkout@v2
 
       - name: Sync docs directory
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git config --global user.email github-actions@github.com
-          git config --global user.name github-actions
+          git config --global user.email "git@marvinjwendt.com"
+          git config --global user.name "MarvinJWendt"
           # Clone using the GH_PAT for authentication
           git clone https://x-access-token:${GH_PAT}@github.com/gttp-cli/gttp.git temp_docs
           rsync -av --delete docs/ temp_docs/docs/
           cd temp_docs
           git add .
-          git commit -m "sync docs"
+          git commit -m "docs: sync docs"
           # Ensure the URL uses the GH_PAT for authentication for future operations
           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/gttp-cli/gttp.git
           git push origin main

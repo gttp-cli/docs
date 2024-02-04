@@ -1,6 +1,6 @@
 # GTTP Documentation
 
-[![Build Status](https://github.com/gttp-cli/docs/actions/workflows/deploy.yml/badge.svg)](https://travis-ci.org/gttp-cli/docs)
+[![Build Status](https://github.com/gttp-cli/docs/actions/workflows/deploy.yml/badge.svg)](https://docs.gttp.dev)
 
 
 > [!IMPORTANT]  

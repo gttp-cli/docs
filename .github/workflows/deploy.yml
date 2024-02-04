@@ -12,19 +12,16 @@ concurrency:
 
 jobs:
   deploy:
-    name: Build & Deploy GitHub Pages
+    name: Build & Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Install Node.js
         uses: actions/setup-node@v3
-        with:
-          node-version: 16
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         with:
-          version: 8
           run_install: false
 
       - name: Get pnpm store directory

@@ -34,6 +34,10 @@ const config = {
     locales: ['en'],
   },
 
+  scripts: [
+    {src: 'https://a.marvinjwendt.dev/js/script.local.js', defer: true, 'data-domain': 'docs.gttp.dev'}
+  ],
+
   presets: [
     [
       'classic',
@@ -77,6 +81,13 @@ const config = {
     ({
       // Replace with your project's social card
       // image: 'img/docusaurus-social-card.jpg',
+      // announcementBar: {
+      //   id: "wip",
+      //   content: '🚧 GTTP is a work in progress 🚧',
+      //   backgroundColor: '#ff00f0',
+      //   textColor: '#091E42',
+      //   isCloseable: true,
+      // },
       navbar: {
         title: 'GTTP Docs',
         logo: {
@@ -139,6 +150,9 @@ const config = {
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Marvin Wendt`,
+      },
+      colorMode: {
+        respectPrefersColorScheme: true,
       },
       prism: {
         theme: prismThemes.github,

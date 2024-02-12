@@ -35,7 +35,7 @@ const config = {
   },
 
   scripts: [
-    {src: 'https://a.marvinjwendt.dev/js/script.local.js', defer: true, 'data-domain': 'docs.gttp.dev'}
+    {src: 'https://a.marvinjwendt.dev/js/script.js', defer: true, 'data-domain': 'docs.gttp.dev'}
   ],
 
   presets: [
@@ -99,6 +99,16 @@ const config = {
             sidebarId: 'docsSidebar',
             position: 'left',
             label: '🍰 Examples',
+          },
+          {
+            href: 'https://gttp.dev',
+            label: '🌐 Website',
+            position: 'right',
+          },
+          {
+            href: 'https://gttp.dev/play',
+            label: '🛝 Playground',
+            position: 'right',
           },
           {
             href: 'https://github.com/gttp-cli/gttp',
